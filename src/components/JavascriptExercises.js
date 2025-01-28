@@ -3,7 +3,8 @@ import "./JavascriptExercises.css";
 
 const JavascriptExercises = (props) => {
     const [ex1, setEx1] = useState({ num: 0, result: null });
-
+    const arrInputRef = React.createRef();
+    const [flattenedArr, setFlattendedArr] = useState(null);
 
     return (
         <div className="ex1">
@@ -31,6 +32,22 @@ const JavascriptExercises = (props) => {
 
                 }}>Find Even / Odd</button>
                 <span>Result: {ex1.result}</span>
+            </div>
+            <h1>Flatten array</h1>
+            <div className="content">
+                <label>Input Array of arrays</label>
+                <input type="text" ref={arrInputRef}/>
+                <button type="button" onClick={() => {
+                    if (arrInputRef && arrInputRef.current) {
+                        try {
+                            const arr = JSON.parse(arrInputRef.current.value);
+                            setFlattendedArr(arr.flat(Infinity));
+                        } catch(err) {
+                            setFlattendedArr("Enter a valid array of arrays")
+                        }
+                    }
+                }}>Flatten</button>
+                <span>Output: [{flattenedArr.join(", ")}]</span>
             </div>
         </div>
     )

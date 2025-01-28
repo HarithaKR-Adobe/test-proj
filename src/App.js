@@ -17,20 +17,24 @@ function App() {
         </ul>
         <div className='app-content'>
           <Routes>
+            <Route exact path="/" element={
+              <>
+                <Greetings name="Haritha" />
+                <Counter />
+              </>
+            } />
             <Route exact path="/counter" element={
               <>
                 <Greetings name="Haritha" />
                 <Counter />
               </>
-            }>
-            </Route>
+            } />
             <Route exact path="/temperature-controller" element={
               <TemperatureController />
-            }>
-            </Route>
+            }/>
             <Route exact path="/javascript-exercises" element={
               <JavascriptExercises />
-            }></Route>
+            } />
           </Routes>
         </div>
       </div>
