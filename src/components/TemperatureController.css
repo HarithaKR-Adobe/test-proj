@@ -1,0 +1,63 @@
+.temp-controller {
+    background: #5e7ed6;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.disp-temp {
+    align-self: center;
+    width: 100px;
+    color: #f4f4f4;
+    font-size: 48px;
+    padding: 40px;
+    border-radius: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disp-temp sup {
+    align-self: baseline;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.disp-temp.red {
+    background: #f74e1e;
+}
+
+
+.disp-temp.blue {
+    background: #00a4ef;
+}
+
+.disp-temp.green {
+    background: #7fba00;
+}
+
+.buttons {
+    display: inline-flex;
+    gap: 12px;
+    margin: 20px;
+}
+
+.buttons button {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #f4f4f4;
+    color: #f4f4f4;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
